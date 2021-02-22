@@ -19,7 +19,7 @@ myFunction();
 
 
 
-
+// Nested funcations can access the variable because the internal funcatio is hoisted above the funcation
 
 /* 🚀🚀🚀 Task 2: Counter 🚀🚀🚀 */
 /* Use summation to do the following:
