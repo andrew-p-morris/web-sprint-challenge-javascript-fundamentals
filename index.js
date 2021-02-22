@@ -77,7 +77,7 @@ function animalNames(item,index){
 const lowerCase = zooAnimals.map(function(lowerCaseNames){
   return lowerCaseNames.animal_name.toLowerCase()                   
   });
-console.log(lowerCase)
+
 
   
   /* 🦁🦁🦁 Request 3: .filter() 🦁🦁🦁
@@ -85,9 +85,9 @@ console.log(lowerCase)
   Using lowPopulationAnimals use .filter() to create a new array of objects which contains only the animals with a population of less than 5.
   */
 
-  function lowPopulationAnimals(/*Your Code Here*/){
-    /*Your Code Here*/
-  }
+ const lowPop = zooAnimals.filter(function (lowPopulationAnimals){
+  return lowPopulationAnimals.population < 5;
+});
   
 
   /* 🦁🦁🦁 Request 4: .reduce() 🦁🦁🦁
@@ -96,9 +96,12 @@ console.log(lowerCase)
   Remember the reduce method takes two arguments: a callback (which itself takes two args - the accumulator and the item), and an initial value for the count.
   */
 
-  function USApop(/*Your Code Here*/){
-    /*Your Code Here*/
-  }
+ const totalPop = zooAnimals.reduce(function (accumulator, item){
+    return accumulator + item.population;
+},0);
+
+
+
   
   
   // 🦁🦁🦁 Callbacks 🦁🦁🦁  
@@ -109,29 +112,30 @@ console.log(lowerCase)
     * The consume function should return the invocation of cb, passing a and b into cb as arguments
   */
 
-  function consume(/*Your Code Here */){
-    /*Your Code Here */
-  }
+ function consume(num1, num2, operator) {
+  return operator(num1,num2);
+}
+
  
   
   /* 🦁🦁🦁 Step 2: Create several functions to callback with consume(); 🦁🦁🦁 */
  // 🦁🦁🦁 Use add to return the sum of two numbers 🦁🦁🦁
   
-function add(/*Your Code Here */){
-    /*Your Code Here*/
-  }
+const add = function (num1,num2){
+  return num1 + num2;
+}
 
 // 🦁🦁🦁 Use multiply to return the product of two numbers 🦁🦁🦁
-  
-function multiply(/*Your Code Here */){
-   /*Your Code Here */
-  }
+const multiply = function (num1,num2){
+  return num1 * num2;
+}
+
 
  // 🦁🦁🦁 Use greeting to accept a first and last name and return "Hello {first-name} {last-name}, nice to meet you!" 🦁🦁🦁
   
-function greeting(/*Your Code Here */){
-   return /*Your Code Here */
-  }
+ const greeting = function(num1,num2){
+  return `Hello ${num1} ${num2} nice to meet you`
+}
   
   // 🦁🦁🦁 Step 3: Check your work by un-commenting the following calls to consume(): 🦁🦁🦁 
   // ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️
